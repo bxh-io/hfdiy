@@ -1,0 +1,16 @@
+.rangeslider-horizontal {
+  height: 20px;
+  border-radius: 10px;
+}
+.rangeslider-horizontal .rangeslider__fill {
+  height: 100%;
+  background: #27ae60;
+  border-radius: 10px;
+  top: 0;
+}
+.rangeslider-horizontal .rangeslider__handle {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  top: -10px;
+}

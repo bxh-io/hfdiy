@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+  padding: 0;
+  font-family: "Helvetica Neue", serif;
+  font-weight: 300;
+  background: #4A688D;
+  color: #FFFFFF;
+}
+h3 {
+	font-weight: 300;
+	font-size: 26px;
+}
+a{
+  text-decoration: none
+}
+a:visited{
+  color: white;
+}
+
+.app {
+	margin: 0px 10px;
+}
+
+
+
+header {
+	width: 100%;
+	height: 50px;
+	background: #4A688D;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.header-text{
+	font-size: 26px;
+}
+
+
+.ticker{
+  list-style: none;
+    text-transform: none;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 19px;
+    padding-top: 19px;
+    margin-right: 33px;
+    text-decoration: none;
+}
+
+.label-container {
+	display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.label-value {
+  display:flex;
+  flex-direction: column;
+}
+
+.label-value > span{
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7px
+}
+
+.label-color{
+	height: 20px;
+	width: 80px;
+}
+
+.label{}
+
+.right-divider{
+	border-right: solid 1px rgba(255,255,255,0.3);
+    padding-right: 30px;
+}
+.growth-rate-modifier{
+	margin: auto;
+	padding-top: 10px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+}
+
+.growth-rate-modifier > label{
+   padding-left: 20px;
+   padding-bottom: 10px;
+}
+
+
+/* Slider */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 85%; /* Specific width is required for Firefox. */
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 2px;
+  margin-top: 23px;
+      background-color: rgba(255,255,255,0.3);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  height: 26px;
+  width: 20px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -1px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
