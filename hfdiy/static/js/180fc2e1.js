@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "169e106f6c61b97890a0"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "180fc2e1108834930743"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1866,7 +1866,7 @@
 	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.browserHistory, store);
 	ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(react_router_1.Router, { history: history },
-	        React.createElement(react_router_1.Route, { path: "/hfdiy/", component: App_1.App },
+	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
 	            React.createElement(react_router_1.IndexRedirect, { to: "companies" }),
 	            React.createElement(react_router_1.Route, { path: "companies", component: Tickers_1.Tickers }),
 	            React.createElement(react_router_1.Route, { path: "company/:ticker", component: Company_1.Company }))))), document.getElementById("root"));
@@ -34587,7 +34587,7 @@
 	    switch (action.type) {
 	        case "@@router/LOCATION_CHANGE":
 	            const pathname = action.payload.pathname;
-	            const ticker = pathname.split("/")[2];
+	            const ticker = pathname.split("/")[3];
 	            if (ticker) {
 	                const newCompany = companyFactory.createCompany(ticker);
 	                const newBoE = new BoeModule_1.Boe.Boe(state.growthRate, newCompany);
@@ -34821,4 +34821,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=169e106f.js.map
+//# sourceMappingURL=180fc2e1.js.map
