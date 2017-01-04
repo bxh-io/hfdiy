@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d061a67c6a7ba744165b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8f8bec2572fa0d1f1bef"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1868,8 +1868,8 @@
 	    React.createElement(react_router_1.Router, { history: history },
 	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
 	            React.createElement(react_router_1.IndexRedirect, { to: "companies" }),
-	            React.createElement(react_router_1.Route, { path: "companies", component: Tickers_1.Tickers }),
-	            React.createElement(react_router_1.Route, { path: "company/:ticker", component: Company_1.Company }))))), document.getElementById("root"));
+	            React.createElement(react_router_1.Route, { path: "hfdiy/companies", component: Tickers_1.Tickers }),
+	            React.createElement(react_router_1.Route, { path: "hfdiy/company/:ticker", component: Company_1.Company }))))), document.getElementById("root"));
 
 
 /***/ },
@@ -28222,7 +28222,7 @@
 	    render() {
 	        const symbol = this.props.symbol;
 	        return (React.createElement("li", null,
-	            React.createElement(react_router_1.Link, { to: `/company/${symbol}` }, symbol)));
+	            React.createElement(react_router_1.Link, { to: `company/${symbol}` }, symbol)));
 	    }
 	}
 	exports.Ticker = Ticker;
@@ -34822,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=d061a67c.js.map
+//# sourceMappingURL=8f8bec25.js.map
