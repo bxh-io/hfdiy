@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8f8bec2572fa0d1f1bef"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "cf956c7216c035c74267"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28197,7 +28197,7 @@
 	    return (React.createElement("header", null,
 	        React.createElement("div", null,
 	            React.createElement("div", { style: { "float": "left", paddingLeft: "10px" } },
-	                React.createElement(react_router_1.Link, { to: "companies" },
+	                React.createElement(react_router_1.Link, { to: "/hfdiy/" },
 	                    React.createElement("i", { style: { "verticalAlign": "-50%" }, className: "fa fa-bars fa-lg" }))),
 	            React.createElement("span", { className: "header-text" }, "HF-DIY"))));
 	};
@@ -28222,7 +28222,7 @@
 	    render() {
 	        const symbol = this.props.symbol;
 	        return (React.createElement("li", null,
-	            React.createElement(react_router_1.Link, { to: `company/${symbol}` }, symbol)));
+	            React.createElement(react_router_1.Link, { to: `/hfdiy/company/${symbol}` }, symbol)));
 	    }
 	}
 	exports.Ticker = Ticker;
@@ -28231,7 +28231,7 @@
 	        const companies = ['APPL', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
 	            return (React.createElement("li", { className: "ticker", key: ticker },
-	                React.createElement(react_router_1.Link, { to: `/company/${ticker}` }, ticker)));
+	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` }, ticker)));
 	        });
 	        return (React.createElement("ul", null, list));
 	    }
@@ -34822,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=8f8bec25.js.map
+//# sourceMappingURL=cf956c72.js.map
