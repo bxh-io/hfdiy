@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cf956c7216c035c74267"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8fcdce66ea9712e4d431"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28231,6 +28231,7 @@
 	        const companies = ['APPL', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
 	            return (React.createElement("li", { className: "ticker", key: ticker },
+	                "123",
 	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` }, ticker)));
 	        });
 	        return (React.createElement("ul", null, list));
@@ -34822,4 +34823,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=cf956c72.js.map
+//# sourceMappingURL=8fcdce66.js.map
