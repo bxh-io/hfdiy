@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c883e0a11ae879961a95"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b75e31076c552fe1221d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28230,7 +28230,7 @@
 	    render() {
 	        const companies = ['APPL', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
-	            return (React.createElement("li", { className: "ticker", key: ticker },
+	            return (React.createElement("li", { className: "ticker2", key: ticker },
 	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` },
 	                    "123",
 	                    ticker)));
@@ -34824,4 +34824,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=c883e0a1.js.map
+//# sourceMappingURL=b75e3107.js.map
