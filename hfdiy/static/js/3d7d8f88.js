@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "180fc2e1108834930743"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3d7d8f883fa626f93154"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34587,7 +34587,7 @@
 	    switch (action.type) {
 	        case "@@router/LOCATION_CHANGE":
 	            const pathname = action.payload.pathname;
-	            const ticker = pathname.split("/")[3];
+	            const ticker = pathname.split("/")[2];
 	            if (ticker) {
 	                const newCompany = companyFactory.createCompany(ticker);
 	                const newBoE = new BoeModule_1.Boe.Boe(state.growthRate, newCompany);
@@ -34712,6 +34712,7 @@
 	            // this.rdExpense = rdExpense
 	            // this.sgaExpense = sgaExpense
 	            // this.ebitda = ebitda
+	            console.log(ticker, "ticker");
 	            const companyData = companyFixtures[ticker];
 	            const company = new Company(ticker, 
 	            //this.closingPrice = closingPrice;
@@ -34821,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=180fc2e1.js.map
+//# sourceMappingURL=3d7d8f88.js.map
