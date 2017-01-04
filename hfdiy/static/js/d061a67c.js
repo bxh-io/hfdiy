@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "18ac459a0857cea1a331"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d061a67c6a7ba744165b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1863,7 +1863,7 @@
 	    boeEngine: boeEngine_1.boeEngine,
 	    routing: react_router_redux_1.routerReducer
 	}));
-	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.MemoryRouter, store);
+	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.browserHistory, store);
 	ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(react_router_1.Router, { history: history },
 	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
@@ -34712,7 +34712,7 @@
 	            // this.rdExpense = rdExpense
 	            // this.sgaExpense = sgaExpense
 	            // this.ebitda = ebitda
-	            console.log(ticker, "ticker");
+	            console.log("createCompany", ticker, "ticker");
 	            const companyData = companyFixtures[ticker];
 	            const company = new Company(ticker, 
 	            //this.closingPrice = closingPrice;
@@ -34822,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=18ac459a.js.map
+//# sourceMappingURL=d061a67c.js.map
