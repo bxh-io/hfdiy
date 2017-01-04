@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b19ddffbca6f52b9b587"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5b600e48d3758a01324b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1863,7 +1863,7 @@
 	    boeEngine: boeEngine_1.boeEngine,
 	    routing: react_router_redux_1.routerReducer
 	}));
-	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.browserHistory, store);
+	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.hashHistory, store);
 	ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(react_router_1.Router, { history: history },
 	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
@@ -28228,12 +28228,10 @@
 	exports.Ticker = Ticker;
 	class Tickers extends React.Component {
 	    render() {
-	        const companies = ['APPL2', 'FB', 'MSFT'];
+	        const companies = ['APPL', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
 	            return (React.createElement("li", { className: "ticker", key: ticker },
-	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` },
-	                    "123",
-	                    ticker)));
+	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` }, ticker)));
 	        });
 	        return (React.createElement("ul", null, list));
 	    }
@@ -34824,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=b19ddffb.js.map
+//# sourceMappingURL=5b600e48.js.map
