@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0082eba935bc3feb5de5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9b265f44dca091303c89"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -15342,7 +15342,7 @@
 	
 	var ReactComponentTreeHook;
 	
-	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"https://bxh-io.github.io/hfdiy/"}) && ("production") === 'test') {
+	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"https://bxh-io.github.io/"}) && ("production") === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -17708,7 +17708,7 @@
 	
 	var ReactComponentTreeHook;
 	
-	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"https://bxh-io.github.io/hfdiy/"}) && ("production") === 'test') {
+	if (typeof process !== 'undefined' && ({"NODE_ENV":"production","PUBLIC_URL":"https://bxh-io.github.io/"}) && ("production") === 'test') {
 	  // Temporary hack.
 	  // Inline requires don't work well with Jest:
 	  // https://github.com/facebook/react/issues/7240
@@ -34821,4 +34821,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=0082eba9.js.map
+//# sourceMappingURL=9b265f44.js.map
