@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "24d16fcffccd9fdb0fe3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "24daa15f14d9bea85f71"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34589,7 +34589,7 @@
 	            const pathname = action.payload.pathname;
 	            const ticker = pathname.split("/")[2];
 	            console.log("ticker", ticker);
-	            if (ticker in ["MSFT", "FB", "APPL"]) {
+	            if (["MSFT", "FB", "APPL"].indexOf(ticker) > -1) {
 	                const newCompany = companyFactory.createCompany(ticker);
 	                const newBoE = new BoeModule_1.Boe.Boe(state.growthRate, newCompany);
 	                return Object.assign({}, state, { "ticker": ticker, "company": newCompany, "boe": newBoE });
@@ -34823,4 +34823,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=24d16fcf.js.map
+//# sourceMappingURL=24daa15f.js.map
