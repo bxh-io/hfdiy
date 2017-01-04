@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "24daa15f14d9bea85f71"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "18ac459a0857cea1a331"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1863,7 +1863,7 @@
 	    boeEngine: boeEngine_1.boeEngine,
 	    routing: react_router_redux_1.routerReducer
 	}));
-	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.browserHistory, store);
+	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.MemoryRouter, store);
 	ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(react_router_1.Router, { history: history },
 	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
@@ -34588,8 +34588,7 @@
 	        case "@@router/LOCATION_CHANGE":
 	            const pathname = action.payload.pathname;
 	            const ticker = pathname.split("/")[2];
-	            console.log("ticker", ticker);
-	            if (["MSFT", "FB", "APPL"].indexOf(ticker) > -1) {
+	            if (ticker && ["MSFT", "FB", "APPL"].indexOf(ticker) > -1) {
 	                const newCompany = companyFactory.createCompany(ticker);
 	                const newBoE = new BoeModule_1.Boe.Boe(state.growthRate, newCompany);
 	                return Object.assign({}, state, { "ticker": ticker, "company": newCompany, "boe": newBoE });
@@ -34823,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=24daa15f.js.map
+//# sourceMappingURL=18ac459a.js.map
