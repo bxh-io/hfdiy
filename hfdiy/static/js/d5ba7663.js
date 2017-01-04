@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "5b600e48d3758a01324b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d5ba76639f073a63ef59"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1866,10 +1866,10 @@
 	const history = react_router_redux_1.syncHistoryWithStore(react_router_1.hashHistory, store);
 	ReactDOM.render((React.createElement(react_redux_1.Provider, { store: store },
 	    React.createElement(react_router_1.Router, { history: history },
-	        React.createElement(react_router_1.Route, { path: "/hfdiy", component: App_1.App },
+	        React.createElement(react_router_1.Route, { path: "/", component: App_1.App },
 	            React.createElement(react_router_1.IndexRedirect, { to: "companies" }),
-	            React.createElement(react_router_1.Route, { path: "hfdiy/companies", component: Tickers_1.Tickers }),
-	            React.createElement(react_router_1.Route, { path: "hfdiy/company/:ticker", component: Company_1.Company }))))), document.getElementById("root"));
+	            React.createElement(react_router_1.Route, { path: "companies", component: Tickers_1.Tickers }),
+	            React.createElement(react_router_1.Route, { path: "company/:ticker", component: Company_1.Company }))))), document.getElementById("root"));
 
 
 /***/ },
@@ -28197,7 +28197,7 @@
 	    return (React.createElement("header", null,
 	        React.createElement("div", null,
 	            React.createElement("div", { style: { "float": "left", paddingLeft: "10px" } },
-	                React.createElement(react_router_1.Link, { to: "/hfdiy/" },
+	                React.createElement(react_router_1.Link, { to: "/" },
 	                    React.createElement("i", { style: { "verticalAlign": "-50%" }, className: "fa fa-bars fa-lg" }))),
 	            React.createElement("span", { className: "header-text" }, "HF-DIY"))));
 	};
@@ -28222,7 +28222,7 @@
 	    render() {
 	        const symbol = this.props.symbol;
 	        return (React.createElement("li", null,
-	            React.createElement(react_router_1.Link, { to: `/hfdiy/company/${symbol}` }, symbol)));
+	            React.createElement(react_router_1.Link, { to: `company/${symbol}` }, symbol)));
 	    }
 	}
 	exports.Ticker = Ticker;
@@ -28231,7 +28231,7 @@
 	        const companies = ['APPL', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
 	            return (React.createElement("li", { className: "ticker", key: ticker },
-	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` }, ticker)));
+	                React.createElement(react_router_1.Link, { to: `company/${ticker}` }, ticker)));
 	        });
 	        return (React.createElement("ul", null, list));
 	    }
@@ -34822,4 +34822,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=5b600e48.js.map
+//# sourceMappingURL=d5ba7663.js.map
