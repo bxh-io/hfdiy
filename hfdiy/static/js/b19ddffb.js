@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b75e31076c552fe1221d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b19ddffbca6f52b9b587"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28228,9 +28228,9 @@
 	exports.Ticker = Ticker;
 	class Tickers extends React.Component {
 	    render() {
-	        const companies = ['APPL', 'FB', 'MSFT'];
+	        const companies = ['APPL2', 'FB', 'MSFT'];
 	        const list = companies.map((ticker, index, array) => {
-	            return (React.createElement("li", { className: "ticker2", key: ticker },
+	            return (React.createElement("li", { className: "ticker", key: ticker },
 	                React.createElement(react_router_1.Link, { to: `/hfdiy/company/${ticker}` },
 	                    "123",
 	                    ticker)));
@@ -34824,4 +34824,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=b75e3107.js.map
+//# sourceMappingURL=b19ddffb.js.map
