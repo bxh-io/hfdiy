@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "91a9c8c50a10b89e26fe"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5e3896bf249d008e4f83"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28195,7 +28195,6 @@
 	const react_router_1 = __webpack_require__(/*! react-router */ 173);
 	exports.Header = () => {
 	    const showArrow = window.location.hash !== "#/companies";
-	    console.log("showArrow", showArrow);
 	    const displayState = showArrow ? "inline" : "none";
 	    return (React.createElement("header", null,
 	        React.createElement("div", null,
@@ -28267,7 +28266,7 @@
 	            "Growth: ",
 	            props.growthRate,
 	            " % "),
-	        React.createElement("input", { id: "growth-rate", onChange: props.handleChange, type: "range", min: "0", value: props.growthRate, max: "100", step: "1" })));
+	        React.createElement("input", { id: "growth-rate", onChange: props.handleChange, type: "range", min: "-100", value: props.growthRate, max: "100", step: "1" })));
 	};
 	const Label = (props) => {
 	    return (React.createElement("div", { className: props.extraClass },
@@ -28316,7 +28315,7 @@
 	                pointStrokeColor: "#1C849C",
 	                pointHighlightFill: "#1C849C",
 	                pointHighlightStroke: "rgba(151,187,205,1)",
-	                data: [props.boeEngine.company.closingPrice, props.boeEngine.boe.boeGrowthProfitYearTwo, props.boeEngine.boe.boeGrowthProfitYearThree, props.boeEngine.boe.boeGrowthProfitYearThree, props.boeEngine.boe.boeGrowthProfitYearThree]
+	                data: [props.boeEngine.company.closingPrice / props.boeEngine.company.numberOfShares, props.boeEngine.boe.boeGrowthProfitYearTwo, props.boeEngine.boe.boeGrowthProfitYearThree, props.boeEngine.boe.boeGrowthProfitYearThree, props.boeEngine.boe.boeGrowthProfitYearThree]
 	            }
 	        ]
 	    };
@@ -34588,8 +34587,10 @@
 
 	"use strict";
 	const BoeModule_1 = __webpack_require__(/*! ./BoeModule */ 288);
+	//Nasty little hack to handel reading th edefualt state off the URL
+	const windowTicker = window.location.hash.split("/")[2] || "FB";
 	const companyFactory = new BoeModule_1.Boe.CompanyFactory();
-	const faceBookCompany = companyFactory.createCompany("FB");
+	const faceBookCompany = companyFactory.createCompany(windowTicker);
 	const initalGrowthRate = 2;
 	const fbBoe = new BoeModule_1.Boe.Boe(initalGrowthRate, faceBookCompany);
 	const defaultState = { 'growthRate': initalGrowthRate, 'ticker': 'FB', 'company': faceBookCompany, 'boe': fbBoe };
@@ -34789,10 +34790,14 @@
 	            return (fractionalCosts * this.revenueGrowthYearThree);
 	        }
 	        get boeGrowthProfitYearTwo() {
-	            return (((this.revenueGrowthYearTwo - this.costsYearTwo) * (1 - this.normalisedTaxRate)) / this.discountRate) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
+	            return (this.revenueGrowthYearTwo - this.costsYearTwo) * companyModifier;
 	        }
 	        get boeGrowthProfitYearThree() {
-	            return (((this.revenueGrowthYearThree - this.costsThree) * (1 - this.normalisedTaxRate)) / this.discountRate) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
+	            return (this.revenueGrowthYearThree - this.costsThree) * companyModifier;
 	        }
 	        get assumedGrowth() {
 	            const assumedNPVperShare = this.company.closingPrice * this.discountRate;
@@ -34805,25 +34810,30 @@
 	        }
 	        get assumedYearOne() {
 	            const cashFlowYearOne = this.company.totalRevenue - this.costsYearOne;
-	            const companyModifier = (1 / this.discountRate) * (1 - this.normalisedTaxRate) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
 	            return cashFlowYearOne * companyModifier;
 	            //return (cashFlowYearOne*(1-this.normalisedTaxRate))/this.company.numberOfShares;
 	        }
 	        get assumedGrowthYearTwo() {
 	            const cashFlowYearOne = this.company.totalRevenue - this.costsYearOne;
 	            const cashFlowYearTwo = cashFlowYearOne * Math.pow((1 + this.assumedGrowth / 100), 2);
-	            const companyModifier = (1 / this.discountRate) * (1 - this.normalisedTaxRate) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
 	            return cashFlowYearTwo * companyModifier;
 	        }
 	        get assumedGrowthYearThree() {
 	            const cashFlowYearOne = this.company.totalRevenue - this.costsYearOne;
 	            const cashFlowYearThree = cashFlowYearOne * Math.pow((1 + this.assumedGrowth / 100), 3);
-	            const companyModifier = (1 / this.discountRate) * (1 - this.normalisedTaxRate) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
 	            return cashFlowYearThree * companyModifier;
 	        }
 	        get BOELine() {
 	            const boeCashFlow = this.company.totalRevenue - this.company.adjustedEBITDA;
-	            return ((boeCashFlow / (this.discountRate)) * (1 - this.normalisedTaxRate)) / this.company.numberOfShares;
+	            //const companyModifier = (1/this.discountRate)*(1-this.normalisedTaxRate)/this.company.numberOfShares;
+	            const companyModifier = 1 / this.company.numberOfShares;
+	            return boeCashFlow * companyModifier;
 	        }
 	    }
 	    Boe_1.Boe = Boe;
@@ -34832,4 +34842,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=91a9c8c5.js.map
+//# sourceMappingURL=5e3896bf.js.map
