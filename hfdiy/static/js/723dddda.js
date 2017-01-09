@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "60c52ef09ed9972a7836"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "723ddddaf339c4fec3d5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28194,11 +28194,13 @@
 	const React = __webpack_require__(/*! react */ 9);
 	const react_router_1 = __webpack_require__(/*! react-router */ 173);
 	exports.Header = () => {
+	    const showArrow = window.location.hash !== "#/companies";
+	    const displayState = showArrow ? "block" : "hidden";
 	    return (React.createElement("header", null,
 	        React.createElement("div", null,
-	            React.createElement("div", { style: { "float": "left", paddingLeft: "10px" } },
-	                React.createElement(react_router_1.Link, { to: "/" },
-	                    React.createElement("i", { style: { "verticalAlign": "-50%" }, className: "fa fa-arrow-left fa-lg" }))),
+	            React.createElement("div", { style: { "float": "left", "paddingLeft": "10px" } },
+	                React.createElement(react_router_1.Link, { to: "/companies" },
+	                    React.createElement("i", { style: { "verticalAlign": "-50%", "display": displayState }, className: "fa fa-arrow-left fa-lg" }))),
 	            React.createElement("span", { className: "header-text" }, "HF-DIY"))));
 	};
 	exports.App = (props) => {
@@ -34829,4 +34831,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=60c52ef0.js.map
+//# sourceMappingURL=723dddda.js.map
