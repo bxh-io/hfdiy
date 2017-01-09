@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "723ddddaf339c4fec3d5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "834d89a141fee2b9408b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28195,6 +28195,7 @@
 	const react_router_1 = __webpack_require__(/*! react-router */ 173);
 	exports.Header = () => {
 	    const showArrow = window.location.hash !== "#/companies";
+	    console.log("showArrow", showArrow);
 	    const displayState = showArrow ? "block" : "hidden";
 	    return (React.createElement("header", null,
 	        React.createElement("div", null,
@@ -34831,4 +34832,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=723dddda.js.map
+//# sourceMappingURL=834d89a1.js.map
