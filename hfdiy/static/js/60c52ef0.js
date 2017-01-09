@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d5ba76639f073a63ef59"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "60c52ef09ed9972a7836"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28198,7 +28198,7 @@
 	        React.createElement("div", null,
 	            React.createElement("div", { style: { "float": "left", paddingLeft: "10px" } },
 	                React.createElement(react_router_1.Link, { to: "/" },
-	                    React.createElement("i", { style: { "verticalAlign": "-50%" }, className: "fa fa-bars fa-lg" }))),
+	                    React.createElement("i", { style: { "verticalAlign": "-50%" }, className: "fa fa-arrow-left fa-lg" }))),
 	            React.createElement("span", { className: "header-text" }, "HF-DIY"))));
 	};
 	exports.App = (props) => {
@@ -28250,7 +28250,14 @@
 	const React = __webpack_require__(/*! react */ 9);
 	const Chart_1 = __webpack_require__(/*! ./Chart */ 240);
 	const react_redux_1 = __webpack_require__(/*! react-redux */ 251);
-	exports.CompanyName = (props) => { return (React.createElement("h3", null, props.companyName)); };
+	exports.CompanyName = (props) => {
+	    return (React.createElement("span", null,
+	        React.createElement("h3", { style: { "display": "inline" } }, props.companyName),
+	        React.createElement("h4", { style: { "display": "inline", "paddingLeft": "10px", "fontWeight": 300 } },
+	            "(",
+	            props.ticker,
+	            ")")));
+	};
 	exports.GrowthRateModifier = (props) => {
 	    return (React.createElement("div", { className: "growth-rate-modifier" },
 	        React.createElement("label", null,
@@ -28325,12 +28332,12 @@
 	        scaleShowLabels: true,
 	    };
 	    return (React.createElement("div", { className: "company" },
-	        React.createElement(exports.CompanyName, { companyName: props.boeEngine.company.name }),
+	        React.createElement(exports.CompanyName, { companyName: props.boeEngine.company.name, ticker: props.boeEngine.company.ticker }),
 	        React.createElement(Chart_1.Chart, { chartData: chartData, chartOptions: chartOptions }),
 	        React.createElement(exports.GrowthRateModifier, { growthRate: props.boeEngine.growthRate, handleChange: onSliderValueChange }),
 	        React.createElement("div", { className: "label-container" },
 	            React.createElement(Label, { extraClass: "right-divider", color: "#FFBC64", stockValue: props.boeEngine.boe.assumedGrowthYearThree.toFixed(2), explainerText: "Stock Price" }),
-	            React.createElement(Label, { extraClass: "right-divider", color: "red", stockValue: props.boeEngine.company.closingPrice.toFixed(2), explainerText: "BoE" }),
+	            React.createElement(Label, { extraClass: "right-divider", color: "red", stockValue: props.boeEngine.boe.BOELine.toFixed(2), explainerText: "BoE" }),
 	            React.createElement(Label, { extraClass: "", color: "#1C849C", stockValue: props.boeEngine.boe.boeGrowthProfitYearThree.toFixed(2), explainerText: "Growth BoE" }))));
 	};
 	exports.Company = react_redux_1.connect((state) => { return state; })(_Company);
@@ -34822,4 +34829,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=d5ba7663.js.map
+//# sourceMappingURL=60c52ef0.js.map
